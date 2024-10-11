@@ -1,0 +1,80 @@
+nav{
+    z-index: 10001;
+  }
+.navbar {
+    padding: 10px 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo img{
+    width: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1em;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+}
+nav ul li a:hover{
+    color: rgb(63, 162, 246);
+}
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.nav-links.visible {
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+      display: flex; /* Show menu icon on smaller screens */
+      flex-direction: column;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links by default on small screens */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Positioning for dropdown */
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      right: 0;
+      background-color: white; /* Background color for dropdown */
+      z-index: 100; /* Ensure it appears above other elements */
+    }
+  
+    .nav-links.visible {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+      text-align: center;
+    }
+  }

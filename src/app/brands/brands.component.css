@@ -1,0 +1,41 @@
+.brand-container{
+    padding: 20px 13%;
+}
+.brand-pics{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.pic-text {
+    padding: 10px;
+}
+.pic-text img{
+    width: 140px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .pic-text img {
+        width: 100px; /* Adjust for tablets */
+    }
+
+    .brand-header h2 {
+        font-size: 1.5em; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .pic-text img {
+        width: 80px; /* Adjust for mobile */
+    }
+
+    .brand-header h2 {
+        font-size: 1.2em; /* Smaller header */
+    }
+
+    .brand-pics {
+        justify-content: center; /* Center the items on mobile */
+    }
+}
